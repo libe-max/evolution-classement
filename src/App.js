@@ -19,7 +19,7 @@ export default class App extends Component {
    * * * * * * * * * * * * * * * * */
   constructor () {
     super()
-    this.c = 'lblb-some-app'
+    this.c = 'lblb-evolution-classement'
     this.state = {
       loading_sheet: false,
       error_sheet: null,
@@ -110,9 +110,7 @@ export default class App extends Component {
 
     /* Display component */
     return <div className={classes.join(' ')}>
-      App is ready.<br />
-      - fill spreadsheet field in config.js<br />
-      - display it's content via state.data_sheet
+      Évolution classement
     </div>
   }
 }
