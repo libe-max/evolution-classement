@@ -2,6 +2,7 @@
   "name": "libe-apps-template",
   "version": "0.2.2",
   "private": true,
+  "homepage": "/apps/2019/07/le-fil-du-tour-de-france",
   "dependencies": {
     "libe-components": "^0.7.5",
     "react": "^16.8.6",
