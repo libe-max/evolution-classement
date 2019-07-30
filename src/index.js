@@ -13,18 +13,6 @@ class AppWrapper extends Component {
     const { title, url, description, author, image } = meta
     return <div id='libe-labo-app-wrapper'>
       <Helmet>
-        <title>Libération.fr – {title}</title>
-        <link rel='canonical' href={url} />
-        <meta name='author' content={author} />
-        <meta name='description' content={description} />
-        <meta property='og:url' content={url} />
-        <meta property='og:title' content={title} />
-        <meta property='og:description' content={description} />
-        <meta property='og:image' content={image} />
-        <meta name='twitter:url' content={url} />
-        <meta name='twitter:title' content={title} />
-        <meta name='twitter:description' content={description} />
-        <meta name='twitter:image' content={image} />
         {/* Libé styles */}
         <link rel="stylesheet" href={`${statics_url}/styles/liberation.css`} />
         {/* Libe Labo styles */}

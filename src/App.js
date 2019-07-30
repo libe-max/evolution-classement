@@ -6,21 +6,13 @@ import Slot from 'libe-components/lib/layouts/Slot'
 import Hero from 'libe-components/lib/blocks/Hero'
 import LibeLaboLogo from 'libe-components/lib/blocks/LibeLaboLogo'
 import ArticleMeta from 'libe-components/lib/blocks/ArticleMeta'
+import ShareArticle from 'libe-components/lib/blocks/ShareArticle'
 import InterTitle from 'libe-components/lib/text-levels/InterTitle'
 import Slug from 'libe-components/lib/text-levels/Slug'
 import Paragraph from 'libe-components/lib/text-levels/Paragraph'
 import moment from 'moment'
 import { parseTsv } from 'libe-utils'
 import { Parser } from 'html-to-react'
-
-/*
- *   MyNew app
- *   ------------------------------------------------------
- *
- *   DESCRIPTION
- *   Lorem ipsum dolor sit amet   
- *
- */
 
 export default class App extends Component {
   /* * * * * * * * * * * * * * * * *
@@ -188,7 +180,7 @@ export default class App extends Component {
               { name: 'Maxime Fabas', role: 'author' },
               { name: 'Dario Ingiusto', role: 'author' },
             ]}
-            publishedOn={parseInt(moment('2019/07/29 10:00', 'YYYY/MM/DD H:m').format('x'), 10)} />
+            publishedOn={parseInt(moment('2019/07/29 10:00', 'YYYY/MM/DD HH:mm').format('x'), 10)} />
           </div>
         </Slot>
       </Grid>
@@ -197,6 +189,13 @@ export default class App extends Component {
       <Grid width={[12, 12, 12]} gutterSize={[2, 1, 1]} showGrid={false}>
         <Slot width={[5, 7, 10]} offset={[3.5, 2.5, 1]} className={`${c}__intro`}>
           <Paragraph big>{this.h2r.parse(data.intro_text)}</Paragraph>
+        </Slot>
+      </Grid>
+
+      {/* SHARE */}
+      <Grid width={[12, 12, 12]} gutterSize={[2, 1, 1]} showGrid={false}>
+        <Slot width={[12, 12, 12]} className={`${c}__share`}>
+          <ShareArticle short iconsOnly tweet={`Alaphilippe en jaune, la bordure, l'abandon de Pinot, les étapes tronquées dans les Alpes… En un clin d'œil et un seul graphique, revivez la victoire d'Egan Bernal sur le Tour de France %23TDF2019`} />
         </Slot>
       </Grid>
 
@@ -244,6 +243,13 @@ export default class App extends Component {
           </Slot>
         </Grid>)
       }</div>
+
+      {/* SHARE */}
+      <Grid width={[12, 12, 12]} gutterSize={[2, 1, 1]} showGrid={false}>
+        <Slot width={[12, 12, 12]} className={`${c}__share`}>
+          <ShareArticle short iconsOnly tweet={`Alaphilippe en jaune, la bordure, l'abandon de Pinot, les étapes tronquées dans les Alpes… En un clin d'œil et un seul graphique, revivez la victoire d'Egan Bernal sur le Tour de France %23TDF2019`} />
+        </Slot>
+      </Grid>
 
       {/* SIGNATURE [WIP]: dynamic content */}
       <Grid width={[12, 12, 12]} gutterSize={[2, 1, 1]} showGrid={false}>
